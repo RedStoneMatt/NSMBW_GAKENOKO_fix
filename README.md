@@ -1,5 +1,15 @@
 # NSMBW GAKENOKO fix
 
+## RSM's note
+ 
+So uh, I wanted to give this a try but with other stuff so I needed the Clang version of Kamek, sooooo I "ported" these pieces of code to something Clang Kamek can work with.
+
+So here's a little disclaimer: I did not do any work on this, all I did was moving some files and that's all, therefore if you use this for a project I would like you not to credit me but to credit [Meatball132](https://github.com/Meatball132/NSMBW_GAKENOKO_fix), [Ninji](https://github.com/Treeki) and the other people who helped him (See Original Description below)
+
+That's all, thanks !
+
+## Original Description
+
 EN_GAKE_NOKO (Cliff Koopa) is an unused enemy in New Super Mario Bros. Wii that still has some code leftover in the game. It's meant to hang from cliff edges and shimmy across them.
 
 Unfortunately, although most of its code found its way into the final game's binaries, its constructor was replaced by one that simply deletes the actor as soon as it's spawned. This is a [Kamek](https://github.com/Treeki/Kamek) project written by [Ninji](https://github.com/Treeki/), [Skawo](https://github.com/skawo), [RoadrunnerWMC](https://github.com/RoadrunnerWMC), and me that replaces this ctor with one that allows the enemy to spawn correctly.

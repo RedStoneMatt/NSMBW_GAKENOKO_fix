@@ -1,0 +1,27 @@
+---
+source_files: [../src/gakenoko.cpp, ../src/gakenoko.S]
+hooks:
+  - name: PatchWhateverThisIs
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x80A025A0
+    target_func: 'EN_GAKE_NOKO_ctor(daEnGakeNoko_c*)'
+
+  - name: GakeNokoMove
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x80a02de4
+    target_func: 'GakeNokoMove'
+
+  - name: GakeNokoFoolMove
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x80a02f80
+    target_func: 'GakeNokoMove'
+
+  - name: GakeNokoFall
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x80a032c8
+    target_func: 'GakeNokoFall'
+
